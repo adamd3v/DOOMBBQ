@@ -95,12 +95,10 @@ namespace NEP.DOOMBBQ
             if (Input.GetKeyDown(KeyCode.Alpha0))
             {
                 MobjManager.Instance.SpawnMobj(player.transform.position + player.transform.forward, MobjType.MT_PLAYER, 0f);
-                Logger.Msg("Spawning Doom Marine");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 MobjManager.Instance.SpawnMobj(player.transform.position + player.transform.forward, MobjType.MT_TROOP, 0f);
-                Logger.Msg("Spawning Imp");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
@@ -113,6 +111,14 @@ namespace NEP.DOOMBBQ
             else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 MobjManager.Instance.SpawnMobj(player.transform.position + player.transform.forward, MobjType.MT_SERGEANT, 0f);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                MobjManager.Instance.SpawnMobj(player.transform.position + player.transform.forward, MobjType.MT_HEAD, 0f);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                MobjManager.Instance.SpawnMobj(player.transform.position + player.transform.forward, MobjType.MT_SHOTGUY, 0f);
             }
         }
 

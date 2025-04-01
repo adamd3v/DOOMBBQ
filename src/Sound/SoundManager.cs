@@ -64,7 +64,7 @@ namespace NEP.DOOMBBQ.Sound
 
             foreach (var lump in soundLumps)
             {
-                if (lump.output.name == cleanedName)
+                if (lump.soundName == cleanedName)
                 {
                     return lump.output;
                 }
@@ -121,7 +121,6 @@ namespace NEP.DOOMBBQ.Sound
                 src.spatialBlend = fullVolume ? 0f : 0.75f;
                 first.transform.position = position;
                 first.SetActive(true);
-                Main.Logger.Msg("Spawning audio source with clip " + src.clip.name);
             }
         }
     }

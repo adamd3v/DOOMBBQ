@@ -1,6 +1,5 @@
-The demons of Hell have encroached the land of MythOS, and there is only one man who can stop them. You. Fight the endless onslaught of demons in BONELAB, and put an end to the hell spawn.
 # Overview
-DOOMLAB is a ***partial source port,*** and it requires a copy of these IWADS to work:
+DOOMBBQ is a ***partial source port (forked from DOOMLAB),*** and it requires a copy of these IWADS to work:
 
 - Doom 1, Doom Shareware, or Ultimate Doom
 - Doom 2: Hell on Earth (BFG Edition, DOOM (2016), or Doom Eternal)

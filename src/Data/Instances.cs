@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NEP.DOOMLAB.Data
+namespace NEP.DOOMBBQ.Data
 {
     public class Instances<T>
     {

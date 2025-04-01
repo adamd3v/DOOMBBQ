@@ -1,8 +1,8 @@
 ﻿using System;
 
-using NEP.DOOMLAB.Entities;
+using NEP.DOOMBBQ.Entities;
 
-namespace NEP.DOOMLAB.Data
+namespace NEP.DOOMBBQ.Data
 {
     public class State
     {

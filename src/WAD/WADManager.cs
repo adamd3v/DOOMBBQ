@@ -1,7 +1,7 @@
 using System.IO;
 using System.Collections.Generic;
 
-namespace NEP.DOOMLAB.WAD
+namespace NEP.DOOMBBQ.WAD
 {
     public class WADManager
     {

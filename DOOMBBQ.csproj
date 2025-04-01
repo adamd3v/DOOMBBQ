@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<OutputType>Library</OutputType>
+		<RootNamespace>NEP.DOOMBBQ</RootNamespace>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<PropertyGroup>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="0Harmony">
+		  <HintPath>E:\Steam Games\steamapps\common\ENA Dream BBQ\MelonLoader\net35\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="JoelG.ENA4">
+		  <HintPath>E:\Steam Games\steamapps\common\ENA Dream BBQ\ENA-4-DreamBBQ_Data\Managed\JoelG.ENA4.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+		  <HintPath>E:\Steam Games\steamapps\common\ENA Dream BBQ\MelonLoader\net35\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>$(ENA_DIR)\ENA-4-DreamBBQ_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityExplorer.Standalone.Mono">
+		  <HintPath>E:\Steam Games\steamapps\common\ENA Dream BBQ\Mods\UnityExplorer.STANDALONE.Mono.dll</HintPath>
+		</Reference>
+		<Reference Include="UniverseLib.Mono">
+		  <HintPath>E:\Steam Games\steamapps\common\ENA Dream BBQ\Mods\UniverseLib.Mono.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="src\BuildInfo.gen.cs" />
+	</ItemGroup>
+	<PropertyGroup />
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="ECHO Copying $(ProjectName).dll to $(ENA_DIR)\Mods&#xD;&#xA;COPY &quot;$(TargetPath)&quot; &quot;$(ENA_DIR)\Mods\$(ProjectName).dll&quot;" />
+	</Target>
+</Project>

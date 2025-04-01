@@ -1,4 +1,4 @@
-namespace NEP.DOOMLAB
+namespace NEP.DOOMBBQ
 {
     public static class Settings
     {

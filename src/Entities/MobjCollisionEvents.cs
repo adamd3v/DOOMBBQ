@@ -1,15 +1,12 @@
 using UnityEngine;
 
-using NEP.DOOMLAB.Game;
-using NEP.DOOMLAB.Sound;
+using NEP.DOOMBBQ.Game;
+using NEP.DOOMBBQ.Sound;
 
-namespace NEP.DOOMLAB.Entities
+namespace NEP.DOOMBBQ.Entities
 {
-    [MelonLoader.RegisterTypeInIl2Cpp]
     public class MobjCollisionEvents : MonoBehaviour
     {
-        public MobjCollisionEvents(System.IntPtr ptr) : base(ptr) { }
-
         private Mobj mobj;
 
         private void Awake()

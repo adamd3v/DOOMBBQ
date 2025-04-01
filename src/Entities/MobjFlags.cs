@@ -1,4 +1,4 @@
-﻿namespace NEP.DOOMLAB.Entities
+﻿namespace NEP.DOOMBBQ.Entities
 {
     [System.Flags]
     public enum MobjFlags

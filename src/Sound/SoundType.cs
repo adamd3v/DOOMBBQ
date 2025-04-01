@@ -1,4 +1,4 @@
-namespace NEP.DOOMLAB.Sound
+namespace NEP.DOOMBBQ.Sound
 {
     public enum SoundType
     {

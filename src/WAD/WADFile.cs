@@ -4,9 +4,9 @@ using System.Linq;
 
 using UnityEngine;
 
-using Patch = NEP.DOOMLAB.WAD.DataTypes.Patch;
+using Patch = NEP.DOOMBBQ.WAD.DataTypes.Patch;
 
-namespace NEP.DOOMLAB.WAD
+namespace NEP.DOOMBBQ.WAD
 {
     [System.Serializable]
     public class WADFile

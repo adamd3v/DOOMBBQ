@@ -2,10 +2,11 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-using NEP.DOOMLAB.Data;
-using NEP.DOOMLAB.Sound;
+using NEP.DOOMBBQ.Data;
+using NEP.DOOMBBQ.Sound;
+using NEP.DOOMBBQ.Rendering;
 
-namespace NEP.DOOMLAB.Entities
+namespace NEP.DOOMBBQ.Entities
 {
     public class MobjManager
     {
@@ -30,18 +31,16 @@ namespace NEP.DOOMLAB.Entities
             }
 
             GameObject mobjBase = GameObject.Instantiate(mobjPrefab, position, Quaternion.AngleAxis(angle, Vector3.up));
-            Mobj mobj = mobjBase.GetComponent<Mobj>();
-            mobj.brain = mobjBase.GetComponent<MobjBrain>();
+            Mobj mobj = mobjBase.AddComponent<Mobj>();
+            mobj.brain = mobjBase.AddComponent<MobjBrain>();
             mobj.rigidbody = mobjBase.GetComponent<Rigidbody>();
             mobj.collider = mobjBase.GetComponent<BoxCollider>();
             mobj.audioSource = mobjBase.GetComponent<AudioSource>();
+            mobjBase.transform.Find("Pivot").gameObject.AddComponent<MobjRenderer>();
 
             mobj.OnSpawn(position, type);
 
             mobj.name = $"[MOBJ] - {mobj.type}";
-
-            mobj.gameObject.layer = LayerMask.NameToLayer("EnemyColliders");
-            mobj.collider.gameObject.layer = LayerMask.NameToLayer("EnemyColliders");
 
             mobj.rigidbody.mass = mobj.info.mass;
             mobj.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
@@ -50,7 +49,7 @@ namespace NEP.DOOMLAB.Entities
             mobj.collider.center = Vector3.up * (mobj.height / 32f) / 2f;
             mobj.collider.size = new Vector3(mobj.radius / 32f, mobj.height / 32f, mobj.radius / 32f);
 
-            if(mobj.flags.HasFlag(MobjFlags.MF_SHOOTABLE) || mobj.flags.HasFlag(MobjFlags.MF_COUNTKILL))
+            if (mobj.flags.HasFlag(MobjFlags.MF_SHOOTABLE) || mobj.flags.HasFlag(MobjFlags.MF_COUNTKILL))
             {
                 var trpSphere = mobjBase.transform.GetChild(0).gameObject;
                 trpSphere.transform.localPosition = Vector3.up * mobj.height / 32f;

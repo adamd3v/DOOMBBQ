@@ -1,16 +1,9 @@
-using NEP.DOOMLAB.Game;
-using NEP.DOOMLAB.Data;
+using NEP.DOOMBBQ.Game;
+using NEP.DOOMBBQ.Data;
 
 using UnityEngine;
 
-using Il2CppSLZ.Combat;
-
-using MelonLoader;
-using Il2CppSLZ.Props;
-using Il2CppSLZ.Marrow;
-using Il2CppSLZ.Marrow.Data;
-
-namespace NEP.DOOMLAB.Entities
+namespace NEP.DOOMBBQ.Entities
 {
     public static class MobjInteraction
     {
@@ -144,15 +137,6 @@ namespace NEP.DOOMLAB.Entities
             if (UnityEngine.Physics.Raycast(ray, out RaycastHit hit, distance))
             {
                 Collider collider = hit.collider;
-                ObjectDestructible breakable = ObjectDestructible.Cache.Get(collider.gameObject);
-
-                if(breakable != null)
-                {
-                    AttackType attackType = AttackType.Piercing;
-                    MobjManager.Instance.SpawnMobj(hit.point, MobjType.MT_PUFF);
-                    breakable.TakeDamage(direction, damage, false, attackType);
-                    return false;
-                }
 
                 Mobj hitMobj = collider.GetComponent<Mobj>();
 
@@ -278,7 +262,7 @@ namespace NEP.DOOMLAB.Entities
 
             if(target == Mobj.player)
             {
-                Mobj.player.playerHealth.TAKEDAMAGE(damage / 10);
+                
             }
             else
             {

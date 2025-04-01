@@ -1,4 +1,4 @@
-﻿namespace NEP.DOOMLAB.Data
+﻿namespace NEP.DOOMBBQ.Data
 {
     public enum StateNum
     {

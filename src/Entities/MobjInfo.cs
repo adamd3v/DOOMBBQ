@@ -1,7 +1,7 @@
-using NEP.DOOMLAB.Data;
-using NEP.DOOMLAB.Sound;
+using NEP.DOOMBBQ.Data;
+using NEP.DOOMBBQ.Sound;
 
-namespace NEP.DOOMLAB.Entities
+namespace NEP.DOOMBBQ.Entities
 {
     [System.Serializable]
     public struct MobjInfo

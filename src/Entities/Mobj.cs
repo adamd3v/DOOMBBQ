@@ -3,24 +3,14 @@ using System.Diagnostics;
 
 using UnityEngine;
 
-using Il2CppSLZ.Marrow;
-using Il2CppSLZ.Marrow.AI;
-using Il2CppSLZ.Marrow.Data;
-using Il2CppSLZ.Marrow.Pool;
-using Il2CppSLZ.Marrow.Warehouse;
+using NEP.DOOMBBQ.Data;
+using NEP.DOOMBBQ.Game;
+using NEP.DOOMBBQ.Sound;
 
-using NEP.DOOMLAB.Data;
-using NEP.DOOMLAB.Game;
-using NEP.DOOMLAB.Sound;
-using BoneLib;
-
-namespace NEP.DOOMLAB.Entities
+namespace NEP.DOOMBBQ.Entities
 {
-    [MelonLoader.RegisterTypeInIl2Cpp]
     public class Mobj : MonoBehaviour
     {
-        public Mobj(IntPtr ptr) : base(ptr) { }
-
         public static Instances<Mobj> ComponentCache { get; private set; }
 
         public static Action<Mobj> OnDeath;
@@ -75,9 +65,6 @@ namespace NEP.DOOMLAB.Entities
         public Rigidbody rigidbody;
         public BoxCollider collider;
 
-        public Player_Health playerHealth;
-        public TriggerRefProxy triggerRefProxy;
-
         public AudioSource audioSource;
 
         public Action<Mobj> CurrentAction { get; private set; }
@@ -98,9 +85,6 @@ namespace NEP.DOOMLAB.Entities
         private void Start()
         {
             info = Info.MobjInfos[(int)type];
-            playerHealth = BoneLib.Player.RigManager.GetComponent<Player_Health>();
-            
-            player.health = player.playerHealth.curr_Health;
             DoomGame.Instance.OnTick += WorldTick;
         }
 
@@ -290,10 +274,7 @@ namespace NEP.DOOMLAB.Entities
 
             if(flags.HasFlag(MobjFlags.MF_COUNTKILL))
             {
-                if(Mobj.player.playerHealth.deathIsImminent)
-                {
-                    Mobj.player.playerHealth.LifeSavingDamgeDealt();
-                }
+                
             }
 
             SpawnMobjAmmo(type);
@@ -314,30 +295,7 @@ namespace NEP.DOOMLAB.Entities
 
         public void SpawnMobjAmmo(MobjType type)
         {
-            string lightAmmoBarcode = "c1534c5a-683b-4c01-b378-6795416d6d6f";
-            string mediumAmmoBarcode = "c1534c5a-57d4-4468-b5f0-c795416d6d6f";
-            string heavyAmmoBarcode = "c1534c5a-97a9-43f7-be30-6095416d6d6f";
-
-            string targetBarcode;
-
-            switch(type)
-            {
-                case MobjType.MT_WOLFSS:
-                case MobjType.MT_POSSESSED:
-                    targetBarcode = lightAmmoBarcode;
-                    break;
-                case MobjType.MT_SHOTGUY:
-                    targetBarcode = heavyAmmoBarcode;
-                    break;
-                case MobjType.MT_CHAINGUY:
-                    targetBarcode = mediumAmmoBarcode;
-                    break;
-                default:
-                    return;
-            }
-
-            SpawnableCrateReference ammoCrateRef = new SpawnableCrateReference(targetBarcode);
-            HelperMethods.SpawnCrate(ammoCrateRef, transform.position, default, default);
+            
         }
     }
 }

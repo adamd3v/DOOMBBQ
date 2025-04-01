@@ -1,4 +1,4 @@
-﻿namespace NEP.DOOMLAB.WAD
+﻿namespace NEP.DOOMBBQ.WAD
 {
     public class WADIndexEntry
     {

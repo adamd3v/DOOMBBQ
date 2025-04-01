@@ -4,10 +4,10 @@ using MelonLoader;
 
 using UnityEngine;
 
-using NEP.DOOMLAB.Data;
-using NEP.DOOMLAB.Entities;
+using NEP.DOOMBBQ.Data;
+using NEP.DOOMBBQ.Entities;
 
-namespace NEP.DOOMLAB.Game
+namespace NEP.DOOMBBQ.Game
 {
     public class DoomGame
     {

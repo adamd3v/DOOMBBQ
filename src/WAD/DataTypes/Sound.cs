@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace NEP.DOOMLAB.WAD.DataTypes
+namespace NEP.DOOMBBQ.WAD.DataTypes
 {
     public struct Sound
     {

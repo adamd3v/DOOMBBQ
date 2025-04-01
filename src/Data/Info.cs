@@ -1,7 +1,7 @@
-﻿using NEP.DOOMLAB.Sound;
-using NEP.DOOMLAB.Entities;
+﻿using NEP.DOOMBBQ.Sound;
+using NEP.DOOMBBQ.Entities;
 
-namespace NEP.DOOMLAB.Data
+namespace NEP.DOOMBBQ.Data
 {
     public static class Info
     {

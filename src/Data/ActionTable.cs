@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using NEP.DOOMLAB.Entities;
+using NEP.DOOMBBQ.Entities;
 
-namespace NEP.DOOMLAB.Data
+namespace NEP.DOOMBBQ.Data
 {
     public static class ActionTable
     {

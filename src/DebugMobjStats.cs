@@ -1,16 +1,13 @@
 using UnityEngine;
 
-using Il2CppTMPro;
+using TMPro;
 
-using NEP.DOOMLAB.Entities;
+using NEP.DOOMBBQ.Entities;
 
-namespace NEP.DOOMLAB.Debug
+namespace NEP.DOOMBBQ.Debug
 {
-    [MelonLoader.RegisterTypeInIl2Cpp]
     public class DebugMobjStats : MonoBehaviour
     {
-        public DebugMobjStats(System.IntPtr ptr) : base(ptr) { }
-
         public TextMeshPro statText;
         private Mobj mobj;
         private Camera camera;

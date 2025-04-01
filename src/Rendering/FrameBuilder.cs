@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
-using NEP.DOOMLAB.Data;
-using NEP.DOOMLAB.WAD;
-using NEP.DOOMLAB.WAD.DataTypes;
+using NEP.DOOMBBQ.Data;
+using NEP.DOOMBBQ.WAD;
+using NEP.DOOMBBQ.WAD.DataTypes;
 
-namespace NEP.DOOMLAB.Rendering
+namespace NEP.DOOMBBQ.Rendering
 {
     // From Managed Doom, by sinshu & Moien Tajik
     // https://github.com/sinshu/managed-doom/blob/master/ManagedDoom/src/Doom/Graphics/SpriteLookup.cs

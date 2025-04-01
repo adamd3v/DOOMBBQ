@@ -1,4 +1,4 @@
-﻿namespace NEP.DOOMLAB.Rendering
+﻿namespace NEP.DOOMBBQ.Rendering
 {
     public class SpriteDef
     {

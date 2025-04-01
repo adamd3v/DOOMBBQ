@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 
-using NEP.DOOMLAB.Data;
-using NEP.DOOMLAB.Entities;
-using NEP.DOOMLAB.Game;
+using NEP.DOOMBBQ.Data;
+using NEP.DOOMBBQ.Entities;
+using NEP.DOOMBBQ.Game;
 
-namespace NEP.DOOMLAB.Rendering
+namespace NEP.DOOMBBQ.Rendering
 {
-    [MelonLoader.RegisterTypeInIl2Cpp]
     public class MobjRenderer : MonoBehaviour
     {
-        public MobjRenderer(System.IntPtr ptr) : base(ptr) { }
-
         public MobjType mobjType;
 
         public DoomGame game;

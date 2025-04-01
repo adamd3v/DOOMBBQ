@@ -1,4 +1,4 @@
-﻿namespace NEP.DOOMLAB.Patches
+﻿namespace NEP.DOOMBBQ.Patches
 {
     
 }

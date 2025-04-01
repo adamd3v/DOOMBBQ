@@ -13,27 +13,19 @@ DOOMBBQ is a ***partial source port (forked from DOOMLAB),*** and it requires a 
 Some PWAD files will load, and others will not. This is because WADs use DeHACKEd lumps, ZDOOM lumps, or GZDOOM specific lumps and/or structure.
 
 # Installation
-### PCVR
-1. Navigate to the DOOMLAB folder in the ZIP
+### PC
+1. Navigate to the DOOMBBQ folder in the ZIP
 2. Drag and drop both the Mods folder and the UserData folder into your game directory.
 3. Next, navigate to where you install your custom maps and avatars.
-4. Drag the "NotEnoughPhotons.DOOMLAB" folder into the folder where you install your maps and avatars
-5. Place an IWAD (see above) inside of UserData/Not Enough Photons/DOOMLAB/IWADS, so that the mod works properly
-6. You're done!
-
-### Meta Quest 2
-1. Navigate to the DOOMLAB folder in the ZIP
-2. Drag and drop both the Mods folder and the UserData folder into your game directory.
-3. Next, navigate to where you install your custom maps and avatars.
-4. Drag the "NotEnoughPhotons.DOOMLAB" folder into the folder where you install your maps and avatars
-5. Place an IWAD (see above) inside of UserData/Not Enough Photons/DOOMLAB/IWADS, so that the mod works properly
+4. Drag the "NotEnoughPhotons.DOOMBBQ" folder into the folder where you install your maps and avatars
+5. Place an IWAD (see above) inside of UserData/Not Enough Photons/DOOMBBQ/IWADS, so that the mod works properly
 6. You're done!
 
 # Port Overview
 
 ## Features
 
-Currently, DOOMLAB has support for loading both IWADs and PWADS, **but as of now, the range of supported PWADS is limited. This will change in the future!**
+Currently, DOOMBBQ has support for loading both IWADs and PWADS, **but as of now, the range of supported PWADS is limited. This will change in the future!**
 ### Support Table
 | Feature | Supported | Notes |
 | ------- | - | ----- |
@@ -58,9 +50,3 @@ Currently, DOOMLAB has support for loading both IWADs and PWADS, **but as of now
 - iD Software - DOOM source code
 - decino - Extensive research into DOOM logic from his amazing videos
 - sinshu - Frame builder algorithm from Managed Doom
-
-# Links
-- Source Code
-- Release Trailer
-- Not Enough Photons TikTok
-
